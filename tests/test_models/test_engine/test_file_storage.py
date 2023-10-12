@@ -118,7 +118,7 @@ class TestFileStorage(unittest.TestCase):
     def test_get(self):
         """Test that get properly returns a requested object"""
         storage = FileStorage()
-        user = User(name="User1")
+        user = User(name="User1", email="User1@example.com")
         user.save()
         self.assertEqual(user, storage.get("User", user.id))
 
